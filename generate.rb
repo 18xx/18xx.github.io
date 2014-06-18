@@ -12,17 +12,17 @@ markdown = Redcarpet::Markdown.new renderer
 
 games = []
 
-Dir.glob('18xx-rules-differences/build/*.md') do |file|
-  game_file_name = "games/" + file.split('/').last.gsub('.md', '').gsub(' ', '_') + ".html"
+Dir.glob('18xx-rules-differences/build/*.md') do |game_file|
+  game_file_name = "games/" + game_file.split('/').last.gsub('.md', '').gsub(' ', '_') + ".html"
 
   File.open(game_file_name, 'w') do |file|
-    file.write(markdown.render File.read(file))
+    file.write(markdown.render(File.read(game_file)))
   end
   games << game_file_name
 end
 
 File.open('index.html', 'w') do |file|
   games.each do |game|
-    file.write "<a href='#{game}'>#{game.gsub('games/', '')}</a>\n"
+    file.write "<a href='#{game}'>#{game.gsub('games/', '')}</a><br>\n"
   end
 end
