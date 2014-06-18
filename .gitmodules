@@ -1,0 +1,3 @@
+[submodule "18xx-rules-differences"]
+	path = 18xx-rules-differences
+	url = https://github.com/18xx/18xx-rules-differences.git
