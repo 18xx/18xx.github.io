@@ -21,6 +21,8 @@ Dir.glob('18xx-rules-differences/build/*.md') do |game_file|
   games << game_file_name
 end
 
+games.sort!
+
 File.open('index.html', 'w') do |file|
   games.each do |game|
     file.write "<a href='#{game}'>#{game.gsub('games/', '')}</a><br>\n"
