@@ -25,6 +25,6 @@ games.sort!
 
 File.open('index.html', 'w') do |file|
   games.each do |game|
-    file.write "<a href='#{game}'>#{game.gsub('games/', '')}</a><br>\n"
+    file.write "<a href='#{game}'>#{game.gsub(/^games\//, '').gsub(/\.html$/, '').gsub('_', ' ')}</a><br>\n"
   end
 end
