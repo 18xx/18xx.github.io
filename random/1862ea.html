@@ -1,0 +1,62 @@
+<script>
+  function shuffle(a) {
+    for (let i = a.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [a[i], a[j]] = [a[j], a[i]];
+    }
+    return a;
+  }
+
+  const companies = [
+    "<strong>E&H</strong> - Ely & Huntingdon",
+    "<strong>ECR</strong> - Eastern Counties Railway",
+    "<strong>ENR</strong> - East Norfolk Railway",
+    "<strong>ESR</strong> - East Suffolk Railway",
+    "<strong>EUR</strong> - Eastern Union Railway",
+    "<strong>FDR</strong> - Felixstowe Dock & Railway",
+    "<strong>I&B</strong> - Ipswich & Bury Railway Black/Grey Bury",
+    "<strong>L&D</strong> - Lynn & Dereham Railway",
+    "<strong>L&E</strong> - Lynn & Ely Railway Red/Yellow",
+    "<strong>L&H</strong> - Lynn & Hunstanton Railway Blue/Red",
+    "<strong>N&B</strong> - Norwich & Brandon Railway",
+    "<strong>N&E</strong> - Northern & Eastern Railway Grey/Green",
+    "<strong>N&S</strong> - Norfolk & Suffolk, Joint Railway",
+    "<strong>Y&N</strong> - Yarmouth & Norwich Railway Black/Red",
+    "<strong>NGC</strong> - Newmarket and Great Chesterford Railway",
+    "<strong>SVR</strong> - Colchester, Stour Valley, Sudbury & Halstead",
+    "<strong>WNR</strong> - West Norfolk Railway",
+    "<strong>W&F</strong> - Wells & Fakenham Railway",
+    "<strong>WVR</strong> - Waveney Valley Railway",
+    "<strong>WStI</strong> - Wisbech, St Ives & Cambridge Junction Rwy"
+  ];
+
+  const shuffledCompanies = shuffle(companies);
+
+  const permits = [
+    'Freight',
+    'Freight',
+    'Freight',
+    'Freight',
+    'Freight',
+    'Freight',
+    'Express',
+    'Express',
+    'Express',
+    'Express',
+    'Express',
+    'Local',
+    'Local',
+    'Local',
+    'Local',
+    'Local'
+  ];
+</script>
+
+<h1>1862EA: Company Order</h1>
+<ol>
+  <script>
+    shuffle(permits).map((permit, idx) => {
+      document.write("<li>" + permit + ": " + shuffledCompanies[idx]+ "</li>");
+    });
+  </script>
+</ol>
