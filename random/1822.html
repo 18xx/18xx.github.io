@@ -1,0 +1,89 @@
+<script>
+  function shuffle(a) {
+    for (let i = a.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [a[i], a[j]] = [a[j], a[i]];
+    }
+    return a;
+  }
+
+  function randomize(companies) {
+    shuffle(companies).forEach(c => document.write("<li>" + c + "</li>"));
+  }
+</script>
+
+<h2>Company Concessions</h2>
+<ol>
+  <li>LNWR</li>
+<script>
+  randomize([
+    'GWR',
+    'LBSCR',
+    'SECR',
+    'CR',
+    'MR',
+    'L&YR',
+    'NBR',
+    'SWR',
+    'NER'
+  ]);
+</script>
+</ol>
+
+<h2>Minor Companies</h2>
+<ol>
+  <li>M24 - Swansea &amp; Mumbles Railway</li>
+<script>
+  randomize([
+    "M1 - Great North of Scotland Railway",
+    "M2 - Lanarkshire & Dunbartonshire Railway",
+    "M3 - Edinburgh & Dalkeith Railway",
+    "M4 - Newcastle & North Shields Railway",
+    "M5 - Stockton and Darlington Railway ",
+    "M6 - Furness Railway",
+    "M7 - Warrington & Newton Railway",
+    "M8 - Manchester Sheffield & Lincolnshire Railway",
+    "M9 - East Lincolnshire Railway",
+    "M10 - Grand Junction Railway",
+    "M11 - Great Northern Railway",
+    "M12 - Eastern Union Railway",
+    "M13 - Headcorn & Maidstone Junction Light Railway",
+    "M14 - Metropolitan Railway",
+    "M15 - London Tilbury & Southend Railway",
+    "M16 - London & Birmingham Railway",
+    "M17 - London & Southampton Railway",
+    "M18 - Somerset & Dorset Joint Railway",
+    "M19 - Penarth Harbour & Dock Railway Company",
+    "M20 - Monmouthshire Railway & Canal Company",
+    "M21 - Taff Vale railway",
+    "M22 - Exeter and Crediton Railway",
+    "M23 - West Cornwall Railway"
+  ]);
+</script>
+</ol>
+
+<h2>Private Companies</h2>
+<ol>
+  <li>P1- Butterly Engineering Company</li>
+<script>
+  randomize([
+    "P2 - Middleton Railway (MtonR)",
+    "P3 - Shrewsbury and Hereford Railway (S&HR)",
+    "P4 - South Devon Railway (SDR)",
+    "P5 - London, Chatham and Dover Railway (LC&DR)",
+    "P6 - Leeds & Selby Railway (L&SR)",
+    "P7 - Shrewsbury and Birmingham Railway (S&BR)",
+    "P8 - Edinburgh and Glasgow Railway (E&GR)",
+    "P9 - Midland and Great Northern Joint Railway (M&GNR)",
+    "P10 - Glasgow and South-Western Railway (G&SWR)",
+    "P11 - Bristol & Exeter Railway (B&ER)",
+    "P12 - Leicester & Swannington Railway (L&SR)",
+    "P13 - York, Newcastle and Berwick Railway (YN&BR)",
+    "P14 - Kilmarnock and Troon Railway (K&TR)",
+    "P15 - Highland Railway (HR)",
+    "P16 - Off-Shore Tax Haven",
+    "P17 - Lancashire Union Railway",
+    "P18 - Cromford and High Peak Railway"
+  ]);
+</script>
+</ol>
